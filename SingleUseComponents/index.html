@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Components 101</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css">
+		<style>
+			body {padding-top: 40px;}
+		</style>
+	</head>
+	<body>
+
+
+		<div id="root" class="container">
+
+
+			<progress-view inline-template>
+				<div>
+
+					<h1>Your completion Rate for this course is {{ completionRate }}%.</h1>
+
+					<p><button @click="completionRate += 10">Update Completion Rate</button></p>
+
+				</div>
+			</progress-view>
+
+		</div>
+
+		<script src="https://unpkg.com/vue@2.2.4"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>
