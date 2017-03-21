@@ -10,6 +10,32 @@
 
 		<div id="root" class="container">
 
+			<modal v-if="showModal" @close='showModal = false'>
+				<p>We insert any text here.</p>
+			</modal>
+
+			<button @click="showModal = true">Show Modal</button>
+
+			<!--WE WANT TO CREATE THIS ENTIRELY IN A VUE COMPONENT-->
+			<!-- <div class="modal is-active">
+				<div class="modal-background"></div>
+				<div class="modal-content">
+					<div class="box">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Proin porta risus eget dui sagittis imperdiet a eget sem.
+							Praesent elementum, orci pulvinar tempor pellentesque,
+							tellus mi commodo risus, in maximus odio magna at ipsum.
+							Vivamus a sapien non sapien facilisis lacinia. Mauris sit
+							amet nulla vel diam faucibus vehicula sit amet id diam.
+							Aliquam a consequat ex. Sed nec scelerisque massa. Nulla
+							facilisi. Ut in risus justo. Fusce accumsan et quam non
+							tincidunt. Nam mattis elementum dui.
+						</p>
+					</div>
+
+				</div>
+				<button class="modal-close"></button>
+			</div> -->
 
 
 		</div>
