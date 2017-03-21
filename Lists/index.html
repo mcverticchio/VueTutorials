@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lists</title>
+	</head>
+	<body>
+
+
+		<div id="root">
+
+			<ul>
+				<li v-for="name in names"> {{name}}</li>
+				<!-- OR can use v-text="name" instead of {{ name }}-->
+			</ul>
+				<!-- can refer to any keynames and will reference the method on use-->
+				<!-- SHORTHAND:  @click="addName"-->
+			<input id="input" type="text" v-model="newName" v-on:keyUp="addName">
+			<button v-on:click="addName" id="button">Add Name</button>
+
+		</div>
+
+		<script src="https://unpkg.com/vue@2.2.4"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello Databinding</title>
+	</head>
+	<body>
+
+
+		<div id="root">
+			<input type="text" id="input" v-model="message">	<!--binding to message property -->
+
+			<p>The value of the input is: {{ message}}</p>
+		</div>
+
+		<script src="https://unpkg.com/vue@2.2.4"></script>
+		<script type="text/javascript" src="app.js">
+
+		</script>
+	</body>
+</html>
+
+
+
+<!-- v-model is a directive specifically for form inputs and controls -->
+<!-- LESSON 2
+	Downloaded vue dev tools from the chrome store and allowed vue access to files
+	**Can access properties in the vue instance within your console by typing $ + name of the variable + .message ( or whatever property you want to view!)
+	"single source of truth" = data object defines our truth, by changing that value it is reflected in the DOM
+-->

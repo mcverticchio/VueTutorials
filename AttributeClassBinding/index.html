@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Attribute and Data Binding</title>
+
+		<style media="screen">
+			/*.color-red { color: red; }*/
+			/*.color-blue { color: blue; }*/
+			.is-loading { background: red; }
+		</style>
+
+	</head>
+	<body>
+
+
+		<div id="root">
+			<!--Cannot simply do title="title", it will take the string value
+		 		Have to use attribute binding, basically saying we want to bind the title
+				attribute to whatever is called title in our data object
+				SHORTHAND:  :title="title"-->
+
+			<!-- <button @click="method" v-bind:title="title">Hover Over Me</button> -->
+			<!-- <h1 :class="className">Hello World</h1> -->
+			<button :disabled="isdisabled" :class="{ 'is-loading': isLoading }" @click="toggleClass">Toggle Me</button>
+
+		</div>
+
+		<script src="https://unpkg.com/vue@2.2.4"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>

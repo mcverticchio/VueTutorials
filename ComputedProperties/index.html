@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Attribute and Data Binding</title>
+	</head>
+	<body>
+
+
+		<div id="root">
+
+			<!--Can use any expression within v-text-->
+			<!-- <h1 v-text="new Date()"></h1> -->
+
+			<!-- <h1> -->
+				<!-- {{ message.split('').reverse().join('') }} -->
+				<!-- {{ reversedMessage }} -->
+			<!-- </h1> -->
+
+			<h1>All Tasks</h1>
+			<ul>
+				<li v-for="task in tasks"><input v-model="task.completed" type="checkbox" /> {{task.description}} </li>
+			</ul>
+
+			<h1>Incomplete Tasks</h1>
+			<ul>
+				<li v-for="task in incompleteTasks"> {{task.description}} </li>
+			</ul>
+
+			<h1>Complete Tasks</h1>
+			<ul>
+				<li v-for="task in completeTasks"> {{task.description}} </li>
+			</ul>
+
+		</div>
+
+		<script src="https://unpkg.com/vue@2.2.4"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>

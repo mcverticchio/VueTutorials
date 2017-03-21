@@ -1,0 +1,11 @@
+a {
+  font-size: 20px;
+}
+a:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+h1 {
+  color: orange;
+}
