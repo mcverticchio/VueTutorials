@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Components 101</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css">
+		<style>
+			body {padding-top: 40px;}
+		</style>
+	</head>
+	<body>
+
+
+		<div id="root" class="container">
+
+			<modal>
+				<!-- Template Tag can be used if you just want the text -->
+				<template slot="header">My Title</template>
+
+				Here is my main content.
+
+				<div slot="footer">
+					<a class="button is-success">Save changes</a>
+					<a class="button">Cancel</a>
+				</div>
+			</modal>
+
+		</div>
+
+		<script src="https://unpkg.com/vue@2.2.4"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>

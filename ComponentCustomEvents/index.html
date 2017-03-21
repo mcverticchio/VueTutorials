@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Components 101</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css">
+		<style>
+			body {padding-top: 40px;}
+		</style>
+	</head>
+	<body>
+
+
+		<div id="root" class="container">
+
+			<coupon v-on:applied="onCouponApplied"></coupon>
+			<!---v-on is a good way for child to communicate announcements to the parent (root Instance)-->
+
+			<h1 v-if="couponApplied">You used a coupon!</h1>
+
+			<!-- What about sibling components communicating with one another?  -->
+
+		</div>
+
+		<script src="https://unpkg.com/vue@2.2.4"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>
