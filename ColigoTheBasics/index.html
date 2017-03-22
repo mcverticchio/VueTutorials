@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Components 101</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css">
+		<style>
+			body {padding-top: 40px;}
+		</style>
+	</head>
+	<body>
+
+
+		<div id="root" class="container">
+
+			<input type="text" v-model="greeting" />
+			<p>Your Message Here: {{ greeting }}</p>
+			<button v-on:click="sayHello">Click me and check in the console</button>
+
+			<br></br>
+
+			<div v-if="loggedIn">
+				<input type="text" placeholder="username">
+				<input type="text" placeholder="password">
+				<button type="submit" name="button" @click="login">Submit</button>
+			</div>
+			<div v-else>
+				<h1>Wecome to Coligo!</h1>
+				<button type="submit" name="button" @click="login">Logout</button>
+			</div>
+
+			<br></br>
+
+			<ul>
+				<li v-for="(item, index) in inventory">
+					{{ index }} - {{ item.name }} - ${{ item.price }}
+				</li>
+			</ul>
+
+			<br></br>
+
+			<input type="number" v-model="x">
+			result: {{ doubleX }}
+
+			<br></br>
+
+			<h1>Guess a Number between 1 and 10:</h1><input v-model="userGuess">
+				{{ message }}
+
+
+
+
+		</div>
+
+		<script src="https://unpkg.com/vue@2.2.4"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>
+
+
+<!-- v-show will toggle css display property whereas v-if will completely destroy and reconstruct the element
+	prefer v-show is you need to toggle something very often,  prefer v-if if the condition is unlikely to change at runtime-->
