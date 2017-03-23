@@ -45,7 +45,7 @@ Vue.component('tab', {
 		name: { required: true },
 		selected: { default: false }
 	},
-	data() {
+	data: function() {
 		return {
 			isActive: false
 		}

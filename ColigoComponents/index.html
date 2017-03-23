@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Components 101</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css">
+		<style>
+			body {padding-top: 40px;}
+		</style>
+	</head>
+	<body>
+
+
+		<div id="root">
+
+			<input v-model="newTodoText" placeholder="Add a todo">
+			<button @click="addNewTodo">Add todo</button>
+			<ul>
+				<li is="todo-item" v-for="todo in todos" v-bind:title="todo"></li>
+			</ul>
+
+		</div>
+
+
+		<script src="https://unpkg.com/vue@2.2.4"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>
